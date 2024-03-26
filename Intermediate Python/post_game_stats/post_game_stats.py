@@ -1,15 +1,7 @@
-# It can search for a team by id or name or it can search for a team randomly, then display it's most recent stats and players on the screen.
-# The program ends when the user exits. It will allow the user to search N times for a team and display it's stats and players.
-# It can also allow the user to edit the team's stats, like players. It will allow the user to add or remove players from the team's roster.
-# It will retry the fetching of data three times if there was an error, then it'll show an error and ask the user if it should exit or not.
-
 from prettytable import PrettyTable as pt
 import sys as sy, random as rd, requests as rq
 
-
-
 slugs = ("atlanta-falcons", "buffalo-bills", "chicago-bears", "cincinnati-bengals", "cleveland-browns", "dallas-cowboys", "denver-broncos", "detroit-lions", "green-bay-packers", "tennessee-titans", "indianapolis-colts", "kansas-city-chiefs", "las-vegas-raiders", "los-angeles-rams", "miami-dolphins", "minnesota-vikings", "new-england-patriots", "new-orleans-saints", "new-york-giants", "new-york-jets", "philadelphia-eagles", "arizona-cardinals", "pittsburgh-steelers", "los-angeles-chargers", "san-francisco-49ers", "seattle-seahawks", "tampa-bay-buccaneers", "washington-commanders", "carolina-panthers", "jacksonville-jaguars", "houston-texans", "baltimore-ravens" )
-
 
 teams = (
     # AFC
@@ -35,7 +27,6 @@ teams = (
         ("Arizona Cardinals", "Los Angeles Rams", "San Francisco 49ers", "Seattle Seahawks")
     )
 )
-
 
 def view_menu(options):
     print("+{}+".format("-" * 90))
